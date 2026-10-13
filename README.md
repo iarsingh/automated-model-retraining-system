@@ -1,5 +1,12 @@
 # Automated Model Retraining System
 
+## Overview
+
+An ML engineering exercise that decides whether a model should be retrained. `POST /check` recommends retraining when drift is flagged or the model is more than 30 days old, and it stops at the recommendation: no training job is launched. A versioned `/v1` ops API adds workspaces, tenant isolation, job approval and audit, and the service ships with a Dockerfile, a docker-compose file and a pytest suite run in GitHub Actions.
+
+- **Built with:** Python, pytest, Docker, GitHub Actions
+- **Scope:** Local laptop lab; it does not launch training, call a hosted model or apply production changes.
+
 <!-- project-guide:start -->
 ## Project guide
 
